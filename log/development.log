@@ -1,0 +1,743 @@
+Started GET "/" for 127.0.0.1 at 2019-06-19 11:06:32 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+Migrating to CreatePosts (20190619061932)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190619061932_create_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190619061932"]]
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+Migrating to AddAttachmentImageToPosts (20190619062626)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_name" varchar[0m
+  ↳ db/migrate/20190619062626_add_attachment_image_to_posts.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_content_type" varchar[0m
+  ↳ db/migrate/20190619062626_add_attachment_image_to_posts.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_file_size" integer[0m
+  ↳ db/migrate/20190619062626_add_attachment_image_to_posts.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "posts" ADD "image_updated_at" datetime[0m
+  ↳ db/migrate/20190619062626_add_attachment_image_to_posts.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190619062626"]]
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-19 06:40:22.204008"], ["updated_at", "2019-06-19 06:40:22.204008"]]
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-06-19 12:10:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-19 12:10:58 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-06-19 12:11:03 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 503ms (Views: 488.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:11:06 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (83.0ms)
+  Rendered posts/new.html.erb within layouts/application (83.8ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `lsble' for #<ActionView::Helpers::FormBuilder:0x007ff3650b9fb8>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lsble :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341674729960'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341674729960'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341674913620'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:16:00 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (63.0ms)
+  Rendered posts/new.html.erb within layouts/application (63.7ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `lsble' for #<ActionView::Helpers::FormBuilder:0x007ff366a440c8>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lsble :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341598669840'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341598669840'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341565214460'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:16:03 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (66.0ms)
+  Rendered posts/new.html.erb within layouts/application (66.9ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lsble' for #<ActionView::Helpers::FormBuilder:0x007ff368678578>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lsble :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341702690320'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341702690320'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341702683760'
+Started GET "/posts" for 127.0.0.1 at 2019-06-19 12:16:05 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:16:07 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (87.3ms)
+  Rendered posts/new.html.erb within layouts/application (88.2ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lsble' for #<ActionView::Helpers::FormBuilder:0x007ff3608c1da0>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lsble :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341635227180'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341635227180'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341635826800'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:16:27 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (119.7ms)
+  Rendered posts/new.html.erb within layouts/application (120.6ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff364bdf1f0>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lable :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341671901020'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341671901020'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341671512480'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:16:31 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (67.8ms)
+  Rendered posts/new.html.erb within layouts/application (68.6ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff368955c28>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lable :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341680890500'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341680890500'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341702831420'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:22:34 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (60.1ms)
+  Rendered posts/new.html.erb within layouts/application (60.9ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff36a849968>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lable :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341720403940'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341720403940'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341714033140'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:22:47 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (78.8ms)
+  Rendered posts/new.html.erb within layouts/application (79.6ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff3581aeb88>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lable :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341637764520'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341637764520'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341565824000'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:25:44 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (118.0ms)
+  Rendered posts/new.html.erb within layouts/application (118.8ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff3653b6608>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lable :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341676005720'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341676005720'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341675542980'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:26:56 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (64.9ms)
+  Rendered posts/new.html.erb within layouts/application (65.9ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff3667a17a8>):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.lable :image %>
+    16:     <%= f.file_field :image %>
+    17:   </div>
+    18: 
+  
+app/views/posts/_form.html.erb:15:in `block in _app_views_posts__form_html_erb___444176717489864256_70341686564120'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341686564120'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341686803740'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:34:19 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.0ms)
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @post, html: { multipart: true } do |f| %>
+    2:   <% if post.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341680177200'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341680428420'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:34:23 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.3ms)
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @post, html: { multipart: true } do |f| %>
+    2:   <% if post.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___444176717489864256_70341695260860'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341723254560'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:36:36 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.7ms)
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected tIVAR, expecting keyword_end
+...model: post, local: true) @post, html: { multipart: true } d...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...t, html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:2: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341635263400'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:36:46 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.6ms)
+  Rendered posts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected tLABEL
+...ost, local: true), @post, html: { multipart: true } do |f| @...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...t, html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:2: syntax error, unexpected tLABEL
+app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_47345995062580'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:36:58 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.8ms)
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected tLABEL
+...odel: post, local: true), html: { multipart: true } do |f| @...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...), html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:2: syntax error, unexpected tLABEL
+app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341725013660'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:37:21 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.5ms)
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for {:html=>{:multipart=>true}}:Hash):
+    1: 
+    2: <%= form_for html: { multipart: true } do |f| %>
+    3:   <% if post.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  
+app/views/posts/_form.html.erb:2:in `_app_views_posts__form_html_erb___444176717489864256_70341666241740'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341666367460'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:38:48 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.8ms)
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected '(', expecting keyword_end
+...buffer.append=  form_for @post(model:post,local:true) html: ...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...e) html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:2: syntax error, unexpected '(', expecting keyword_end
+app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341704178820'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:39:01 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.9ms)
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected '(', expecting keyword_end
+...buffer.append=  form_for @post(model:post,local:true) , html...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+... , html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:2: syntax error, unexpected '(', expecting keyword_end
+app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341679431840'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:39:53 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.5ms)
+  Rendered posts/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected tLABEL
+...r(model:post,local:true) ,html: { multipart: true } do |f| @...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+...) ,html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:2: syntax error, unexpected tLABEL
+app/views/posts/_form.html.erb:2: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341721538660'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:42:20 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.3ms)
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"posts"}, missing required keys: [:id]):
+    1: 
+    2: 
+    3: <%= form_for @post,url: post_path ,html: { multipart: true } do |f| %>
+    4:   <% if post.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___444176717489864256_70341680734440'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341680997940'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:42:47 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.6ms)
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/views/posts/_form.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...er.append=  form_for @post html: { multipart: true } do |f| ...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:3: syntax error, unexpected keyword_do_block, expecting keyword_end
+...st html: { multipart: true } do |f| @output_buffer.safe_appe...
+...                               ^
+/home/mallesh/nanipics/app/views/posts/_form.html.erb:26: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/_form.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/posts/_form.html.erb:3: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/posts/_form.html.erb:26: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341723905020'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:42:56 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.1ms)
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2: 
+    3: <%= form_for @post , html: { multipart: true } do |f| %>
+    4:   <% if post.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___444176717489864256_70341565532320'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341565567420'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:45:37 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (66.2ms)
+  Rendered posts/new.html.erb within layouts/application (67.1ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff36aea6fb8>):
+    14:   <% end %>
+    15: 
+    16:   <div class="field">
+    17:     <%= f.lable :image %>
+    18:     <%= f.file_field :image %>
+    19:   </div>
+    20: 
+  
+app/views/posts/_form.html.erb:17:in `block in _app_views_posts__form_html_erb___444176717489864256_70341720988160'
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___444176717489864256_70341720988160'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341722942340'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:45:40 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (78.1ms)
+  Rendered posts/new.html.erb within layouts/application (79.2ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x00561f33f08568>):
+    14:   <% end %>
+    15: 
+    16:   <div class="field">
+    17:     <%= f.lable :image %>
+    18:     <%= f.file_field :image %>
+    19:   </div>
+    20: 
+  
+app/views/posts/_form.html.erb:17:in `block in _app_views_posts__form_html_erb___444176717489864256_47346007119560'
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___444176717489864256_47346007119560'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_47345998062700'
+Started GET "/posts" for 127.0.0.1 at 2019-06-19 12:45:46 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 12:45:49 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (66.5ms)
+  Rendered posts/new.html.erb within layouts/application (67.2ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007ff3580bab50>):
+    14:   <% end %>
+    15: 
+    16:   <div class="field">
+    17:     <%= f.lable :image %>
+    18:     <%= f.file_field :image %>
+    19:   </div>
+    20: 
+  
+app/views/posts/_form.html.erb:17:in `block in _app_views_posts__form_html_erb___444176717489864256_70341565485200'
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___444176717489864256_70341565485200'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2884275784491914070_70341565519620'
+Started GET "/myclicks" for 127.0.0.1 at 2019-06-19 14:55:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/myclicks"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `call'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-06-19 15:08:38 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mallesh/.rvm/gems/ruby-2.2.5/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-06-19 15:14:00 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/models/post.rb:3: syntax error, unexpected tSTRING_BEG, expecting =>
+					  :default_url "/images/ytrlg.png",
+					                ^
+/home/mallesh/nanipics/app/models/post.rb:3: syntax error, unexpected ',', expecting keyword_end):
+  
+app/models/post.rb:3: syntax error, unexpected tSTRING_BEG, expecting =>
+app/models/post.rb:3: syntax error, unexpected ',', expecting keyword_end
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2019-06-19 15:27:48 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mallesh/nanipics/app/models/post.rb:3: syntax error, unexpected tSTRING_BEG, expecting =>
+					  :url "/images/ytrlg.png",
+					        ^
+/home/mallesh/nanipics/app/models/post.rb:3: syntax error, unexpected ',', expecting keyword_end):
+  
+app/models/post.rb:3: syntax error, unexpected tSTRING_BEG, expecting =>
+app/models/post.rb:3: syntax error, unexpected ',', expecting keyword_end
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/posts" for 127.0.0.1 at 2019-06-19 15:28:29 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 196ms (Views: 185.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 15:28:32 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (87.9ms)
+  Rendered posts/new.html.erb within layouts/application (88.7ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007fc018e4b030>):
+    14:   <% end %>
+    15: 
+    16:   <div class="field">
+    17:     <%= f.lable :image %>
+    18:     <%= f.file_field :image %>
+    19:   </div>
+    20: 
+  
+app/views/posts/_form.html.erb:17:in `block in _app_views_posts__form_html_erb___2759875253558054094_70231514113180'
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___2759875253558054094_70231514113180'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___968683386864852391_70231514202000'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 15:32:21 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (69.9ms)
+  Rendered posts/new.html.erb within layouts/application (70.9ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007fc01c093740>):
+    14:   <% end %>
+    15: 
+    16:   <div class="field">
+    17:     <%= f.lable :image %>
+    18:     <%= f.file_field :image %>
+    19:   </div>
+    20: 
+  
+app/views/posts/_form.html.erb:17:in `block in _app_views_posts__form_html_erb___2759875253558054094_70231544847460'
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___2759875253558054094_70231544847460'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___968683386864852391_70231610526880'
+Started GET "/posts/new" for 127.0.0.1 at 2019-06-19 15:32:24 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (67.0ms)
+  Rendered posts/new.html.erb within layouts/application (67.8ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x007fc0118ed130>):
+    14:   <% end %>
+    15: 
+    16:   <div class="field">
+    17:     <%= f.lable :image %>
+    18:     <%= f.file_field :image %>
+    19:   </div>
+    20: 
+  
+app/views/posts/_form.html.erb:17:in `block in _app_views_posts__form_html_erb___2759875253558054094_70231453525060'
+app/views/posts/_form.html.erb:3:in `_app_views_posts__form_html_erb___2759875253558054094_70231453525060'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___968683386864852391_70231454354080'
