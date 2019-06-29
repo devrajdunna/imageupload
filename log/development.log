@@ -17671,3 +17671,67 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2019-06-29 12:39:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mallesh/.rvm/gems/ruby-2.2.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 161ms (Views: 152.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-29 12:39:12 +0530
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.5ms)
+  Rendered posts/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-29 12:39:31 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zLLe+hEFH647FkkxLcvovp/OYtjyI2XmOjdZa9Ve47CVazWhnnHbQz9+BfvL9cBmMtCmcwMJxHXQpn0cHpeUZQ==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcb90110658 @tempfile=#<Tempfile:/tmp/RackMultipart20190629-3034-178lrgn.jpeg>, @original_filename="tvbook.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"tvbook.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+[paperclip] Trying to link /tmp/RackMultipart20190629-3034-178lrgn.jpeg to /tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg
+[paperclip] Trying to link /tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg to /tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1uac1ql.jpeg
+Command :: file -b --mime '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1uac1ql.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg[0]'
+Command :: convert '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/dd3d0ed9e7df48d886be5472c1cd52d220190629-3034-1bjjvm'
+[paperclip] Trying to link /tmp/dd3d0ed9e7df48d886be5472c1cd52d220190629-3034-1bjjvm to /tmp/60f51560001aa680948b6519da3706cb20190629-3034-inikpc
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg[0]'
+Command :: convert '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/dd3d0ed9e7df48d886be5472c1cd52d220190629-3034-afk6ux'
+[paperclip] Trying to link /tmp/dd3d0ed9e7df48d886be5472c1cd52d220190629-3034-afk6ux to /tmp/6660f9c02c85c8ca31938f4d3f8c7b3e20190629-3034-1bojp73
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:31
+[paperclip] Trying to link /tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1xi2tne.jpeg to /tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1sqaztr.jpeg
+Command :: file -b --mime '/tmp/7750e6afb01fa67bfe1d0667c390f31220190629-3034-1sqaztr.jpeg'
+  [1m[36mPost Create (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2019-06-29 07:09:31.779270"], ["updated_at", "2019-06-29 07:09:31.779270"], ["image_file_name", "tvbook.jpeg"], ["image_content_type", "image/jpeg"], ["image_file_size", 6984], ["image_updated_at", "2019-06-29 07:09:31.726316"]]
+  ↳ app/controllers/posts_controller.rb:31
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:31
+Redirected to http://localhost:2020/posts/21
+Completed 302 Found in 67ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/21" for ::1 at 2019-06-29 12:39:31 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:72
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-29 12:39:34 +0530
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
